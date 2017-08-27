@@ -28,18 +28,18 @@ Modify the `script/provider-config.ru` to match your provider's behaviour
 
 ### Run the example
 
-Execute `script/run.sh`.
+Execute `script/run.sh`
 
-You can run just the consumer side or provider side of the process by calling `script/consumer-create-pact.sh` or `script/provider-verify-pact.sh`.
+You can run just the consumer side or provider side of the process by calling `script/consumer-create-pact.sh` or `script/provider-verify-pact.sh`
 
 ## Reporting an issue
 
 * Commit your code on a branch (so you can easily reuse the repository for other issues) and push it to your fork
 
-      git checkout -b "foo-issue"
+      git checkout -b "issue/my-issue"
       git add .
-      git commit -m "Modifying code to recreate my issue"
-      git push --set-upstream origin foo-issue
+      git commit -m "chore: modify code to recreate my issue"
+      git push --set-upstream origin issue/my-issue
 
 * Open an issue in the appropriate codebase (see [pact-foundation][pact-foundation] for most of the repositories) and include a link to your branch.
 
