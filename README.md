@@ -1,5 +1,7 @@
 # Pact standalone e2e example
 
+[![Build Status](https://travis-ci.org/pact-foundation/pact-ruby-standalone-e2e-example.svg?branch=master)](https://travis-ci.org/pact-foundation/pact-ruby-standalone-e2e-example)
+
 Code base to use for demonstrating features or recreating issues in the Ruby standalone implementation of Pact. Please fork it and modify to demonstrate or recreate your own code.
 
 This code base is _not_ intended as an example of a best practice Pact implementation. Its purpose is to create a running example with the simplest code possible.
