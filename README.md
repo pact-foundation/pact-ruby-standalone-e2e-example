@@ -14,7 +14,7 @@ This code base is _not_ intended as an example of a best practice Pact implement
     git clone git@github.com:YOUR_USERNAME/pact-ruby-standalone-e2e-example.git
     cd pact-ruby-standalone-e2e-example
 
-### Install the relevant version
+### Install the relevant version of the pact standalone package
 
 Set the `VERSION` in the `script/install.sh` to the version you are using and run `script/install.sh` (assumes you are on OSX or Linux). This will install the pact executable in `./pact`.
 
