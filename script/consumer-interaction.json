@@ -9,8 +9,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "body": {
-      "message": "Hello world"
-    }
+    "body": null
   }
 }

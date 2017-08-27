@@ -1,0 +1,15 @@
+I, [2017-08-27T10:32:17.347282 #10242]  INFO -- : Running example 'Verifying a pact between Foo and Bar Foo with GET /foo returns a response which has status code 200'
+I, [2017-08-27T10:32:17.347391 #10242]  INFO -- : Sending GET request to path: "/foo" with headers: {}, see debug logs for body
+D, [2017-08-27T10:32:17.347410 #10242] DEBUG -- : body :
+I, [2017-08-27T10:32:17.379753 #10242]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Server"=>"WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)", "Date"=>"Sun, 27 Aug 2017 00:32:17 GMT", "Connection"=>"Keep-Alive", "Content-Length"=>"4"}, see debug logs for body
+D, [2017-08-27T10:32:17.379797 #10242] DEBUG -- : body: null
+I, [2017-08-27T10:32:55.027455 #10342]  INFO -- : Running example 'Verifying a pact between Foo and Bar Foo with GET /foo returns a response which has status code 200'
+I, [2017-08-27T10:32:55.027555 #10342]  INFO -- : Sending GET request to path: "/foo" with headers: {}, see debug logs for body
+D, [2017-08-27T10:32:55.027575 #10342] DEBUG -- : body :
+I, [2017-08-27T10:32:55.061107 #10342]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Server"=>"WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)", "Date"=>"Sun, 27 Aug 2017 00:32:55 GMT", "Connection"=>"Keep-Alive", "Content-Length"=>"7"}, see debug logs for body
+D, [2017-08-27T10:32:55.061154 #10342] DEBUG -- : body: {"a":1}
+I, [2017-08-27T10:33:25.593255 #10426]  INFO -- : Running example 'Verifying a pact between Foo and Bar Foo with GET /foo returns a response which has status code 200'
+I, [2017-08-27T10:33:25.593425 #10426]  INFO -- : Sending GET request to path: "/foo" with headers: {}, see debug logs for body
+D, [2017-08-27T10:33:25.593445 #10426] DEBUG -- : body :
+I, [2017-08-27T10:33:25.624196 #10426]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Server"=>"WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)", "Date"=>"Sun, 27 Aug 2017 00:33:25 GMT", "Connection"=>"Keep-Alive", "Content-Length"=>"4"}, see debug logs for body
+D, [2017-08-27T10:33:25.624237 #10426] DEBUG -- : body: null

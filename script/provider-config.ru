@@ -3,6 +3,6 @@ require 'json'
 run -> (env) {
   status = 200
   headers = {'Content-Type' => 'application/json'}
-  body = {'message' => 'Hello world'}.to_json
+  body = "null"
   [status, headers, [body]]
 }
