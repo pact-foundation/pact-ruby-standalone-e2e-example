@@ -12,7 +12,7 @@ This code base is _not_ intended as an example of a best practice Pact implement
 
     # Fork the repository using the 'Fork' button on the repository home page, then:
     git clone git@github.com:YOUR_USERNAME/pact-ruby-standalone-e2e-example.git
-    cd pact-ruby-e2e-example
+    cd pact-ruby-standalone-e2e-example
 
 ### Install the relevant version
 
