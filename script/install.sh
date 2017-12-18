@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="1.4.3"
+VERSION="1.22.1"
 
 if [ "$(uname)" == "Darwin" ]; then
   OS="osx"

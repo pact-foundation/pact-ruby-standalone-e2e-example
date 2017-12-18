@@ -1,5 +1,6 @@
 {
-  "description": "foo",
+  "providerState": "Regelwerk fuer ÄÄÄ",
+  "description": "Ein Produkt mit Ä",
   "request": {
     "path": "/foo",
     "method": "GET"
@@ -10,7 +11,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "message": "Hello world"
+      "message": "Ä"
     }
   }
 }

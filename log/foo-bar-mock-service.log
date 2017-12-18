@@ -1,0 +1,43 @@
+I, [2017-12-18T12:49:51.434954 #44251]  INFO -- : Cleared interactions
+I, [2017-12-18T12:49:51.452608 #44251]  INFO -- : Registered expected interaction GET /foo
+D, [2017-12-18T12:49:51.452881 #44251] DEBUG -- : {
+  "description": "Ein Produkt mit Ä",
+  "providerState": "Regelwerk fuer ÄÄÄ",
+  "request": {
+    "method": "GET",
+    "path": "/foo"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "message": "Ä"
+    }
+  }
+}
+I, [2017-12-18T12:49:51.468199 #44251]  INFO -- : Received request GET /foo
+D, [2017-12-18T12:49:51.468321 #44251] DEBUG -- : {
+  "path": "/foo",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "curl/7.54.0",
+    "Accept": "*/*",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-12-18T12:49:51.468499 #44251]  INFO -- : Found matching response for GET /foo
+D, [2017-12-18T12:49:51.468602 #44251] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "message": "Ä"
+  }
+}
+I, [2017-12-18T12:49:51.484158 #44251]  INFO -- : Verifying - interactions matched
+I, [2017-12-18T12:49:51.500730 #44251]  INFO -- : Writing pact for Bar to ./pacts/foo-bar.json

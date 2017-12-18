@@ -7,7 +7,8 @@
   },
   "interactions": [
     {
-      "description": "foo",
+      "description": "Ein Produkt mit Ä",
+      "providerState": "Regelwerk fuer ÄÄÄ",
       "request": {
         "method": "GET",
         "path": "/foo"
@@ -18,14 +19,14 @@
           "Content-Type": "application/json"
         },
         "body": {
-          "message": "Hello world"
+          "message": "Ä"
         }
       }
     }
   ],
   "metadata": {
     "pactSpecification": {
-      "version": "1.0.0"
+      "version": "2.0.0"
     }
   }
 }
