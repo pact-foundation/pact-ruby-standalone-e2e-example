@@ -6,11 +6,11 @@ pact/bin/pact-mock-service start -p 1234 --pact-dir ./pacts --log ./log/foo-bar-
 # clear interactions (not necessary for this example, just showing how)
 curl -X DELETE -H "X-Pact-Mock-Service: true"  localhost:1234/interactions
 
-# set up interaction
-curl -X POST -H "X-Pact-Mock-Service: true" -d@script/consumer-interaction.json localhost:1234/interactions
-
-# execute interaction
+# execute interaction - BEFORE SETTING IT UP
 curl localhost:1234/foo
+
+# set up interaction - AFTER EXECUTING IT
+curl -X POST -H "X-Pact-Mock-Service: true" -d@script/consumer-interaction.json localhost:1234/interactions
 
 # verify interaction took place
 curl -H "X-Pact-Mock-Service: true" localhost:1234/interactions/verification

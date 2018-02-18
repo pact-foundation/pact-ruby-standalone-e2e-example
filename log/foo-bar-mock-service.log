@@ -1,0 +1,48 @@
+I, [2018-02-19T07:52:08.391701 #41754]  INFO -- : Cleared interactions
+I, [2018-02-19T07:52:08.407751 #41754]  INFO -- : Received request GET /foo
+D, [2018-02-19T07:52:08.407997 #41754] DEBUG -- : {
+  "path": "/foo",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "curl/7.54.0",
+    "Accept": "*/*",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2018-02-19T07:52:08.408137 #41754] ERROR -- : No matching interaction found for GET /foo
+E, [2018-02-19T07:52:08.408238 #41754] ERROR -- : Interaction diffs for that route:
+E, [2018-02-19T07:52:08.408338 #41754] ERROR -- : 
+I, [2018-02-19T07:52:08.423766 #41754]  INFO -- : Registered expected interaction GET /foo
+D, [2018-02-19T07:52:08.424943 #41754] DEBUG -- : {
+  "description": "foo",
+  "request": {
+    "method": "GET",
+    "path": "/foo"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "message": "Hello world"
+    }
+  }
+}
+W, [2018-02-19T07:52:08.437967 #41754]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Missing requests:
+	GET /foo
+
+Unexpected requests:
+	GET /foo
+
+
+W, [2018-02-19T07:52:08.438077 #41754]  WARN -- : Missing requests:
+	GET /foo
+
+Unexpected requests:
+	GET /foo
+
+
