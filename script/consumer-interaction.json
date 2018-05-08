@@ -2,15 +2,17 @@
   "description": "foo",
   "request": {
     "path": "/foo",
-    "method": "GET"
+    "method": "GET",
+    "headers": {
+      "access_token": "123",
+      "Accept": "text/plain"
+    }
   },
   "response": {
     "status": 200,
     "headers": {
-      "Content-Type": "application/json"
+      "Content-Type": "text/plain"
     },
-    "body": {
-      "message": "Hello world"
-    }
+    "body": "Hello world"
   }
 }

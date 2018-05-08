@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 # start provider server
-pact/bin/rackup script/provider-config.ru -p 9292 &
+# pact/bin/rackup script/provider-config.ru -p 9292 &
+ruby script/provider_with_no_rack.rb &
 provider_pid="$!"
 
 # verify pact
-pact/bin/pact-provider-verifier verify --pact-urls pacts/foo-bar.json --provider-base-url http://localhost:9292
+pact/bin/pact-provider-verifier verify --pact-urls pacts/foo-bar.json --provider-base-url http://localhost:9292 --monkeypatch $(realpath script/provider_monkey_patch.rb)
 
 # stop provider server
 kill -9 $provider_pid

@@ -10,22 +10,24 @@
       "description": "foo",
       "request": {
         "method": "GET",
-        "path": "/foo"
+        "path": "/foo",
+        "headers": {
+          "access_token": "123",
+          "Accept": "text/plain"
+        }
       },
       "response": {
         "status": 200,
         "headers": {
-          "Content-Type": "application/json"
+          "Content-Type": "text/plain"
         },
-        "body": {
-          "message": "Hello world"
-        }
+        "body": "Hello world"
       }
     }
   ],
   "metadata": {
     "pactSpecification": {
-      "version": "1.0.0"
+      "version": "2.0.0"
     }
   }
 }
