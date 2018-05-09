@@ -6,7 +6,7 @@ ruby script/provider_with_no_rack.rb &
 provider_pid="$!"
 
 # verify pact
-pact/bin/pact-provider-verifier verify --pact-urls pacts/foo-bar.json --provider-base-url http://localhost:9292 --monkeypatch $(realpath script/provider_monkey_patch.rb)
+pact/bin/pact-provider-verifier verify --pact-urls pacts/foo-bar.json --provider-base-url http://localhost:9292
 
 # stop provider server
 kill -9 $provider_pid
