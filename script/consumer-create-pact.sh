@@ -10,7 +10,7 @@ curl -X DELETE -H "X-Pact-Mock-Service: true"  localhost:1234/interactions
 curl -X POST -H "X-Pact-Mock-Service: true" -d@script/consumer-interaction.json localhost:1234/interactions
 
 # execute interaction
-curl localhost:1234/foo
+curl "localhost:1234/foo?param=1&param=2"
 
 # verify interaction took place
 curl -H "X-Pact-Mock-Service: true" localhost:1234/interactions/verification

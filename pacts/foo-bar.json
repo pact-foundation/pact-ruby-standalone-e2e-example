@@ -7,25 +7,30 @@
   },
   "interactions": [
     {
-      "description": "foo",
+      "description": "a retrieve thing request",
       "request": {
-        "method": "GET",
-        "path": "/foo"
+        "method": "get",
+        "path": "/foo",
+        "query": "param=%5B%221%22%2C+%221%22%5D",
+        "matchingRules": {
+          "$.query.param": {
+            "min": 2
+          },
+          "$.query.param[*].*": {
+            "match": "type"
+          }
+        }
       },
       "response": {
         "status": 200,
         "headers": {
-          "Content-Type": "application/json"
-        },
-        "body": {
-          "message": "Hello world"
         }
       }
     }
   ],
   "metadata": {
     "pactSpecification": {
-      "version": "1.0.0"
+      "version": "2.0.0"
     }
   }
 }

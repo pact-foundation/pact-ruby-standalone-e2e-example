@@ -1,16 +1,17 @@
 {
-  "description": "foo",
+  "description": "a retrieve thing request",
   "request": {
+    "method": "get",
     "path": "/foo",
-    "method": "GET"
+    "query": {
+      "param": {
+        "contents": "1",
+        "json_class": "Pact::ArrayLike",
+        "min": 2
+      }
+    }
   },
   "response": {
-    "status": 200,
-    "headers": {
-      "Content-Type": "application/json"
-    },
-    "body": {
-      "message": "Hello world"
-    }
+    "status": 200
   }
 }

@@ -1,0 +1,41 @@
+I, [2018-07-13T21:03:43.991370 #37183]  INFO -- : Cleared interactions
+I, [2018-07-13T21:03:44.008663 #37183]  INFO -- : Registered expected interaction GET /foo?param=%5B%221%22%2C+%221%22%5D
+D, [2018-07-13T21:03:44.008939 #37183] DEBUG -- : {
+  "description": "a retrieve thing request",
+  "request": {
+    "method": "get",
+    "path": "/foo",
+    "query": {
+      "param": {
+        "json_class": "Pact::ArrayLike",
+        "contents": "1",
+        "min": 2
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    }
+  }
+}
+I, [2018-07-13T21:03:44.026685 #37183]  INFO -- : Received request GET /foo?param=1&param=2
+D, [2018-07-13T21:03:44.026847 #37183] DEBUG -- : {
+  "path": "/foo",
+  "query": "param=1&param=2",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "curl/7.54.0",
+    "Accept": "*/*",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2018-07-13T21:03:44.027136 #37183]  INFO -- : Found matching response for GET /foo?param=%5B%221%22%2C+%221%22%5D
+D, [2018-07-13T21:03:44.027244 #37183] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  }
+}
+I, [2018-07-13T21:03:44.041854 #37183]  INFO -- : Verifying - interactions matched
+I, [2018-07-13T21:03:44.057369 #37183]  INFO -- : Writing pact for Bar to ./pacts/foo-bar.json
