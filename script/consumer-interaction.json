@@ -1,16 +1,34 @@
 {
-  "description": "foo",
+  "description": "A request for a list of things",
+  "providerState": "there is a PDF for the first thing",
   "request": {
-    "path": "/foo",
-    "method": "GET"
+    "method": "get",
+    "path": "/foo"
   },
   "response": {
     "status": 200,
-    "headers": {
-      "Content-Type": "application/json"
-    },
     "body": {
-      "message": "Hello world"
+      "data": [
+        {
+          "actions": [
+            {
+              "href": "https://example.com/path/to/2019document.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    "matchingRules": {
+      "$.body.data": {
+        "min": 1
+      },
+      "$.body.data[*].*": {
+        "match": "type"
+      },
+      "$.body.data[*].actions[0].href": {
+        "match": "regex",
+        "regex": "https:\\/\\/.*\\.pdf"
+      }
     }
   }
 }

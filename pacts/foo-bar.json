@@ -7,25 +7,45 @@
   },
   "interactions": [
     {
-      "description": "foo",
+      "description": "A request for a list of things",
+      "providerState": "there is a PDF for the first thing",
       "request": {
-        "method": "GET",
+        "method": "get",
         "path": "/foo"
       },
       "response": {
         "status": 200,
         "headers": {
-          "Content-Type": "application/json"
         },
         "body": {
-          "message": "Hello world"
+          "data": [
+            {
+              "actions": [
+                {
+                  "href": "https://example.com/path/to/2019document.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        "matchingRules": {
+          "$.body.data": {
+            "min": 1
+          },
+          "$.body.data[*].*": {
+            "match": "type"
+          },
+          "$.body.data[*].actions[0].href": {
+            "match": "regex",
+            "regex": "https:\\/\\/.*\\.pdf"
+          }
         }
       }
     }
   ],
   "metadata": {
     "pactSpecification": {
-      "version": "1.0.0"
+      "version": "2.0.0"
     }
   }
 }
