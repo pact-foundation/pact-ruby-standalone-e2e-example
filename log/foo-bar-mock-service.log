@@ -1,0 +1,43 @@
+I, [2020-04-25T10:14:30.356538 #52982]  INFO -- : Cleared interactions
+I, [2020-04-25T10:14:30.374284 #52982]  INFO -- : Registered expected interaction GET /foo
+D, [2020-04-25T10:14:30.374659 #52982] DEBUG -- : {
+  "description": "foo",
+  "request": {
+    "method": "GET",
+    "path": "/foo"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "message": "Hello world"
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-25T10:14:30.391519 #52982]  INFO -- : Received request GET /foo
+D, [2020-04-25T10:14:30.391717 #52982] DEBUG -- : {
+  "path": "/foo",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "curl/7.54.0",
+    "Accept": "*/*",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-25T10:14:30.392036 #52982]  INFO -- : Found matching response for GET /foo
+D, [2020-04-25T10:14:30.392197 #52982] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "message": "Hello world"
+  }
+}
+I, [2020-04-25T10:14:30.405458 #52982]  INFO -- : Verifying - interactions matched
+I, [2020-04-25T10:14:30.420287 #52982]  INFO -- : Writing pact for Bar to ./pacts/foo-bar.json
