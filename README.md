@@ -22,6 +22,19 @@ Set the `VERSION` in the `script/install.sh` to the version you are using and ru
 
 Modify the `script/consumer-interaction.json` file to create your interaction. Note that you will have to hand code any matchers you want to use, using either the original Ruby syntax or the v2+ matching rules (see the [pact-specification][pact-specification] for more information).
 
+### How we can use below statements, if we have multiple interactions and want to register all interactions together.
+# set up interaction
+curl -X POST -H "X-Pact-Mock-Service: true" -d@script/consumer-interaction.json localhost:1234/interactions
+
+Error after above command
+curl -X POST -H "X-Pact-Mock-Service: true" -d@script/consumer-interaction.json localhost:1234/interactions
+{"message":"Error ocurred in mock service: TypeError - no implicit conversion of String into Integer","backtrace":["/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-support-1.16.7/lib/pact/consumer_contract/interaction_v2_parser.rb:15:in `[]'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-support-1.16.7/lib/pact/consumer_contract/interaction_v2_parser.rb:15:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-support-1.16.7/lib/pact/consumer_contract/interaction_parser.rb:16:in `parse_v2_interaction'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-support-1.16.7/lib/pact/consumer_contract/interaction_parser.rb:10:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-support-1.16.7/lib/pact/consumer_contract/interaction.rb:22:in `from_hash'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/mock_service/request_handlers/interaction_post.rb:26:in `respond'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/mock_service/request_handlers/base_request_handler.rb:17:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/rack-2.1.4/lib/rack/cascade.rb:35:in `block in call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/rack-2.1.4/lib/rack/cascade.rb:26:in `each'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/rack-2.1.4/lib/rack/cascade.rb:26:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/consumer/mock_service/cors_origin_header_middleware.rb:11:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/consumer/mock_service/error_handler.rb:13:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/mock_service/app.rb:34:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/pact-mock_service-3.9.0/lib/pact/consumer/mock_service/set_location.rb:14:in `call'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/rack-2.1.4/lib/rack/handler/webrick.rb:88:in `service'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/webrick-1.3.1/lib/webrick/httpserver.rb:138:in `service'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/webrick-1.3.1/lib/webrick/httpserver.rb:94:in `run'","/Users/ratngupta/github/openapi-swagger-parser/pact/lib/vendor/ruby/2.2.0/gems/webrick-1.3.1/lib/webrick/server.rb:191:in `block in start_thread'"]}%    
+
+# execute interaction
+curl localhost:1234/foo
+
+.........................................................................................
+
 ### "Implement" the provider
 
 Modify the `script/provider-config.ru` to match your provider's behaviour

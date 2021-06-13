@@ -1,5 +1,5 @@
-{
-  "description": "foo",
+[{
+  "description": "foo 1",
   "request": {
     "path": "/foo",
     "method": "GET"
@@ -13,4 +13,34 @@
       "message": "Hello world"
     }
   }
-}
+},{
+  "description": "foo 2",
+  "request": {
+    "path": "/foo",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "message": "Hello world"
+    }
+  }
+},{
+  "description": "foo 3",
+  "request": {
+    "path": "/foo",
+    "method": "PUT"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "message": "Hello world"
+    }
+  }
+}]
